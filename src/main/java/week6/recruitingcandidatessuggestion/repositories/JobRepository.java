@@ -27,7 +27,7 @@ public class JobRepository {
     }
 
     public boolean createJob(String description) {
-        String sql = "INSERT INTO jobs (description) VALUES (?)";
+        String sql = "INSERT INTO job (description) VALUES (?)";
         return jdbcTemplate.update(sql, description) > 0;
     }
 }
